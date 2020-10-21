@@ -14,7 +14,7 @@ public class AbrirYouse {
     private WebDriver driver;
 
 
-    public WebDriver abrirNavegadorYouse() throws IOException, InterruptedException, ExceptionPorto {
+    public WebDriver abrirNavegadorYouse() throws IOException, InterruptedException {
         driver = Navegador.retornarNavegador();
         System.out.println("abriu o navegador");
 
