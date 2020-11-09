@@ -22,7 +22,8 @@ public class Navegador {
         driver = new ChromeDriver();
 
         driver.get("https://www.youse.com.br/seguro-auto/");
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        System.out.println("espera a janela abrir");
+        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
 

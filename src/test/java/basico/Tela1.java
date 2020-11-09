@@ -31,10 +31,10 @@ public class Tela1 {
 
 
     public void preencherTela1(WebDriver driver, Variaveis dados) throws InterruptedException {
-        if (VerificarElemento.verificar(driver, "auto_order_flow_lead_person_data_lead_person_attributes_name", "ID", 5)) {
+        if (VerificarElemento.verificar(driver, "auto_order_flow_lead_person_data_lead_person_attributes_name", "ID", 2)) {
             System.out.println("Achou a tela 1");
 
-            Thread.sleep(1000);
+
             driver.findElement(By.id("auto_order_flow_lead_person_data_lead_person_attributes_name")).sendKeys(dados.getNomeSegur());
 
             driver.findElement(By.id("auto_order_flow_lead_person_data_lead_person_attributes_email")).sendKeys("jose1@hotmail.com");

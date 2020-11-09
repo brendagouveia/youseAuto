@@ -1,6 +1,7 @@
 package basico;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -47,7 +48,7 @@ public class Tela2 {
 
                     driver.findElement(By.xpath("//*[@id=\"container\"]/div[12]/div/a")).click();
                 }
-                Thread.sleep(3000);
+                Thread.sleep(2000);
 
                 WebElement cmbMarca = driver.findElement(By.id("manual_auto_order_flow_pricing_requirements_vehicle_attributes_make"));
                 Select slctMarca = new Select(cmbMarca);
@@ -166,12 +167,12 @@ public class Tela2 {
                                 WebElement cmbTipoPess = driver.findElement(By.id("auto_order_flow_pricing_requirements_vehicle_attributes_ownership_status"));
                                 Select slcTipoPess = new Select(cmbTipoPess);
                                 slcTipoPess.selectByIndex(1);
-                                Thread.sleep(3000);
+                                Thread.sleep(1000);
 
                                 WebElement cmbBlindado = driver.findElement(By.id("auto_order_flow_pricing_requirements_vehicle_attributes_bullet_proof"));
                                 Select slcBlindado = new Select(cmbBlindado);
                                 slcBlindado.selectByIndex(1);
-                                Thread.sleep(3000);
+                                Thread.sleep(1000);
                                 //cep
                                 if (dados.getCep1().contains("30110020")) {
                                     dados.setCep1("30110000");
@@ -202,7 +203,7 @@ public class Tela2 {
                                     }
 
                                 }
-                                Thread.sleep(3000);
+                                Thread.sleep(1000);
                                 WebElement cmbEstCivil = driver.findElement(By.id("auto_order_flow_pricing_requirements_insured_person_attributes_marital_status"));
                                 Select slcEstCivil = new Select(cmbEstCivil);
                                 if (dados.getEstadoCivil().toUpperCase().contains("S")) {
@@ -214,11 +215,15 @@ public class Tela2 {
                                 } else {
                                     slcEstCivil.selectByIndex(4);
                                 }
-                                Thread.sleep(3000);
-                                if (VerificarElemento.verificarExiste(driver, "//*[contains(@data-narrative-form-trigger, 'driver_has_insurance_false')]", "XPATH", 3)) {
-
+                                Thread.sleep(1000);
+                                if (VerificarElemento.verificarExiste(driver, "//*[contains(@data-narrative-form-trigger, 'driver_has_insurance_false')]", "XPATH", 2)) {
+                                    System.out.println("faixa roxa apareceu");
                                     //if (driver.findElements(By.xpath("//*[contains(@data-narrative-form-trigger, 'driver_has_insurance_false')]")).size() > 0) {
-                                    driver.findElement(By.xpath("///*[@id=\"edit_auto_order_flow_pricing_requirements_25704300\"]/fieldset[5]/div/div/fieldset/section/span[2]/div/label")).click();
+                                    WebElement nao25anos= driver.findElement(By.xpath("//*[contains(@data-narrative-form-trigger, 'driver_has_insurance_false')]"));
+
+                                    JavascriptExecutor jsColi = (JavascriptExecutor) driver;
+                                    jsColi.executeScript("arguments[0].click();", nao25anos);
+                                   // driver.findElement(By.xpath("///*[@id=\"edit_auto_order_flow_pricing_requirements_25704300\"]/fieldset[5]/div/div/fieldset/section/span[2]/div/label")).click();
                                 } else {
                                     //tipo de seguro
                                     WebElement cmbTipoSeg = driver.findElement(By.id("auto_order_flow_pricing_requirements_driver_attributes_has_insurance"));
@@ -229,7 +234,7 @@ public class Tela2 {
                                         WebElement cmbTenhoBonus = driver.findElement(By.id("auto_order_flow_pricing_requirements_driver_attributes_has_bonuses_class"));
                                         Select slcTenhoBonus = new Select(cmbTenhoBonus);
                                         slcTenhoBonus.selectByIndex(1);
-                                        Thread.sleep(3000);
+                                        Thread.sleep(1000);
                                         System.out.println("COLOCAR O BONUS");
 
 
@@ -254,7 +259,7 @@ public class Tela2 {
                                         Select slcBonus = new Select(cmbBonus);
                                         slcBonus.selectByIndex(Integer.parseInt(dados.getClasseBonus()));
                                         System.out.println("OK O BONUS");
-                                        Thread.sleep(5000);
+                                        Thread.sleep(1000);
 
                                         if (VerificarElemento.verificar(driver, "auto_order_flow_pricing_requirements_driver_attributes_ci_number", "ATIVO", 10)) {
                                             Thread.sleep(1000);
@@ -282,13 +287,14 @@ public class Tela2 {
                                 System.out.println("Proxima tela");
 
 
-                                Thread.sleep(3000);
+                                Thread.sleep(1000);
                                 driver.switchTo().frame("webWidget");
                                 if (driver.findElements(By.xpath("//*[contains(@aria-label, 'Minimizar widget')]")).size() > 0) {
                                     driver.findElement(By.xpath("//*[contains(@aria-label, 'Minimizar widget')]")).click();
 
                                 }
                                 driver.switchTo().defaultContent();
+
 
                                 imprimir.imprimirPDF(driver, dados.getNrlinha(), "P1_");
                                 imprimir.imprimir(driver, dados.getNrlinha());
