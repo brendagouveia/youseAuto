@@ -59,65 +59,69 @@ public class Impressao {
     }
 
 
-
     public void imprimirPDF(WebDriver driver, String nrlinha, String parte) throws IOException, UnsupportedFlavorException, InterruptedException, AWTException, FindFailed {
-        if (VerificarElemento.verificar(driver, "container", "ID", 10)) {
+        String numeroPdf = nrlinha.replaceAll(".TXT", "");
+        File  file = new File("d:\\youse\\pdf\\" + parte + numeroPdf);
+        if (!file.exists()) {
 
 
-            System.out.println("janela imprimir");
-            Robot r = new Robot();
-            r.keyPress(KeyEvent.VK_CONTROL);
-            r.keyPress(KeyEvent.VK_P);
-            r.keyRelease(KeyEvent.VK_CONTROL);
-            r.keyRelease(KeyEvent.VK_P);
-            Thread.sleep(8000);
-
-            System.out.println("passou o tempo");
-
-            Pattern btnimp;
-            Pattern btnsalvar;
-
-            System.out.println("VAI CARREGAR AS IMAGENS");
-            try {
-                Screen s = new Screen();
-                if (tipoSO.contains("WINDOWS")) {
-                    System.out.println("caminho");
-                    btnimp = new Pattern("D:\\imagem\\imprimir.png");
-                    btnsalvar = new Pattern("D:\\imagem\\salvar.png");
-                    System.out.println(btnimp.toString());
-                } else {
-                    btnimp = new Pattern("/home/robertinho/youse/imagem/imprimir.png");
-                    btnsalvar = new Pattern("/home/robertinho/youse/imagem/salvar.png");
-
-                }
+            if (VerificarElemento.verificar(driver, "container", "ID", 10)) {
 
 
-                System.out.println("vai clicar");
-
-                s.click(btnimp);
+                System.out.println("janela imprimir");
+                Robot r = new Robot();
+                r.keyPress(KeyEvent.VK_CONTROL);
+                r.keyPress(KeyEvent.VK_P);
+                r.keyRelease(KeyEvent.VK_CONTROL);
+                r.keyRelease(KeyEvent.VK_P);
                 Thread.sleep(8000);
-                String numeroPdf = nrlinha.replaceAll(".TXT", "");
-                if (tipoSO.contains("WINDOWS")) {
-                    s.type("d:\\youse\\pdf\\" + parte + numeroPdf);
-                } else {
-                    s.type("/home/robertinho/youse/pdf/" + parte + numeroPdf);
+
+                System.out.println("passou o tempo");
+
+                Pattern btnimp;
+                Pattern btnsalvar;
+
+                System.out.println("VAI CARREGAR AS IMAGENS");
+                try {
+                    Screen s = new Screen();
+                    if (tipoSO.contains("WINDOWS")) {
+                        System.out.println("caminho");
+                        btnimp = new Pattern("D:\\imagem\\imprimir.png");
+                        btnsalvar = new Pattern("D:\\imagem\\salvar.png");
+                        System.out.println(btnimp.toString());
+                    } else {
+                        btnimp = new Pattern("/home/robertinho/youse/imagem/imprimir.png");
+                        btnsalvar = new Pattern("/home/robertinho/youse/imagem/salvar.png");
+
+                    }
+
+
+                    System.out.println("vai clicar");
+
+                    s.click(btnimp);
+                    Thread.sleep(8000);
+                     numeroPdf = nrlinha.replaceAll(".TXT", "");
+                    if (tipoSO.contains("WINDOWS")) {
+                        s.type("d:\\youse\\pdf\\" + parte + numeroPdf);
+                    } else {
+                        s.type("/home/robertinho/youse/pdf/" + parte + numeroPdf);
+                    }
+
+                    Thread.sleep(1000);
+                    s.click(btnsalvar);
+                    Thread.sleep(3000);
+
+                } catch (FindFailed e) {
+                    System.out.println(e.getMessage());
+
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+
                 }
 
-                Thread.sleep(1000);
-                s.click(btnsalvar);
-                Thread.sleep(3000);
-
-            } catch (FindFailed e) {
-                System.out.println(e.getMessage());
-
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-
+                System.out.println("imprimiu");
             }
-
-            System.out.println("imprimiu");
         }
-
 
     }
 

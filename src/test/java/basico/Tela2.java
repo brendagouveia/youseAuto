@@ -27,6 +27,7 @@ public class Tela2 {
 
 
             driver.findElement(By.id("auto_order_flow_pricing_requirements_vehicle_attributes_license_plate_or_vin")).sendKeys("III7777");
+            Thread.sleep(1000);
             driver.findElement(By.id("auto_order_flow_pricing_requirements_vehicle_attributes_license_plate_or_vin")).sendKeys(Keys.TAB);
             Thread.sleep(1000);
 
@@ -48,7 +49,7 @@ public class Tela2 {
             Select slctMarca = new Select(cmbMarca);
 
 
-            if (dados.getMarca().toUpperCase().contains("VW - VOLKWAGEN")) {
+            if (dados.getMarca().toUpperCase().contains("VW - VOLKSWAGEN")) {
                 dados.setMarca("VOLKSWAGEN");
             }
             if (dados.getMarca().toUpperCase().contains("MITSUBISH")) {
