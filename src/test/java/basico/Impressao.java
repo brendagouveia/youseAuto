@@ -70,7 +70,7 @@ public class Impressao {
             r.keyPress(KeyEvent.VK_P);
             r.keyRelease(KeyEvent.VK_CONTROL);
             r.keyRelease(KeyEvent.VK_P);
-            Thread.sleep(6000);
+            Thread.sleep(8000);
 
             System.out.println("passou o tempo");
 

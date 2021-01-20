@@ -23,16 +23,21 @@ public class Tela3 {
 
 
         if (VerificarElemento.verificar(driver, "//*[contains(text(), 'Personalizar')]", "XPATH", 5)) {
-            System.out.println("Achou a escolha produto");
 
-            if (driver.findElements(By.xpath("//*[contains(text(), 'Agora não')]")).size() > 0) {
-                driver.findElement(By.xpath("//*[contains(text(), 'Agora não')]")).click();
+
+            System.out.println("Achou a escolha produto");
+            if (driver.findElements(By.xpath("//*[contains(text(), 'Entendi')]")).size() > 0) {
+                driver.findElement(By.xpath("//*[contains(text(), 'Entendi')]")).click();
             }
+           /* if (driver.findElements(By.xpath("//*[contains(text(), 'Agora não')]")).size() > 0) {
+                driver.findElement(By.xpath("//*[contains(text(), 'Agora não')]")).click();
+            }*/
 
             Thread.sleep(1000);
             driver.findElement(By.xpath("//*[contains(text(), 'Personalizar')]")).click();
             Thread.sleep(1000);
-            if (VerificarElemento.verificar(driver, "//*[contains(text(), 'de acordo com a tabela FIPE do mês de')]", "XPATH", 30)) {
+           // if (VerificarElemento.verificar(driver, "//*[contains(text(), 'Adicione ou retire coberturas do seu seguro.')]", "XPATH", 30)) {
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Vale para perda total')]", "XPATH", 30)) {
                 System.out.println("Achou a tela 3");
                 Thread.sleep(1000);
 
@@ -42,8 +47,14 @@ public class Tela3 {
                 JavascriptExecutor jsColi = (JavascriptExecutor) driver;
                 jsColi.executeScript("arguments[0].click();", meuchkcoli);*/
 
+                //nao contratar qualquer batida
+                WebElement meuchkcoli = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Vale pra qualquer batida')]"));
 
-                if (dados.getFranquia().toUpperCase().contains("RED")) {
+                JavascriptExecutor jsColi = (JavascriptExecutor) driver;
+                jsColi.executeScript("arguments[0].click();", meuchkcoli);
+
+                // se não tem qualquer batida tem q tirar franquia
+             /*   if (dados.getFranquia().toUpperCase().contains("RED")) {
                     if (VerificarElemento.verificar(driver, "/html/body/div[4]/section/form/ul/li[1]/div[2]/div[2]/ul/li[2]/div[2]/div[3]/div/div[2]/div/input", "XPATH", 30)) {
                         System.out.println("achou elemento franquia");
                         WebElement frqMin = driver.findElement(By.xpath("/html/body/div[4]/section/form/ul/li[1]/div[2]/div[2]/ul/li[2]/div[2]/div[3]/div/div[2]/span[1]"));
@@ -62,7 +73,7 @@ public class Tela3 {
                         ((JavascriptExecutor) driver).executeScript("$ ( arguments [ 0]) . val ( " + valFrqMin + ") . change ( )", valfrq);
                         System.out.println("digitou franquia");
                     }
-                }
+                }*/
                 if (Integer.parseInt(dados.getDm()) == 0) {
                     WebElement meuchkdm = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Danos materiais a terceiros')]"));
 
