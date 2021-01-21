@@ -21,8 +21,10 @@ public class Tela4 {
 
     public void preencherTela4(WebDriver driver, Variaveis dados) throws InterruptedException, IOException, UnsupportedFlavorException, FindFailed, AWTException {
 
-        if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_2')]", "XPATH", 10))  {
-       // if (VerificarElemento.verificar(driver, "//*[contains(text(), 'Assistência a automóvel')]", "XPATH", 30)) {
+        // WebDriverWait wait = new WebDriverWait(driver, 15);
+        // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), 'Adicione assistências ao seu seguro')]")));
+        if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_2')]", "XPATH", 10)) {
+
             System.out.println("Achou a tela 4");
             //ass 400 km
             Thread.sleep(1000);
@@ -31,15 +33,15 @@ public class Tela4 {
                 WebElement rdbAss = driver.findElement(By.xpath("//*[contains(@value, 'YOUSE_ID_3')]"));
                 JavascriptExecutor jsAss = (JavascriptExecutor) driver;
                 jsAss.executeScript("arguments[0].click();", rdbAss);*/
-        }
-        if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_2')]", "XPATH", 1)) {
-            WebElement rdbAss = driver.findElement(By.xpath("//*[contains(@value, 'YOUSE_ID_2')]"));
-            JavascriptExecutor jsAss = (JavascriptExecutor) driver;
-            jsAss.executeScript("arguments[0].click();", rdbAss);
-        }
+
+            if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_2')]", "XPATH", 1)) {
+                WebElement rdbAss = driver.findElement(By.xpath("//*[contains(@value, 'YOUSE_ID_2')]"));
+                JavascriptExecutor jsAss = (JavascriptExecutor) driver;
+                jsAss.executeScript("arguments[0].click();", rdbAss);
+            }
 
 
-        Thread.sleep(1000);
+            Thread.sleep(1000);
         /*if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Reparos simples')]", "XPATH", 1)) {
             System.out.println("vidros");
             WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Reparos simples')]"));
@@ -47,66 +49,66 @@ public class Tela4 {
             js.executeScript("arguments[0].click();", meuchk);
 
         }*/
-        WebElement meuchkChave = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Chaveiro auto')]"));
-        JavascriptExecutor jsChave = (JavascriptExecutor) driver;
-        jsChave.executeScript("arguments[0].click();", meuchkChave);
+            WebElement meuchkChave = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Chaveiro auto')]"));
+            JavascriptExecutor jsChave = (JavascriptExecutor) driver;
+            jsChave.executeScript("arguments[0].click();", meuchkChave);
 
-        Thread.sleep(1000);
-        if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Motorista Youse')]", "XPATH", 1)) {
-            System.out.println("motorista");
-            WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Motorista Youse')]"));
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].click();", meuchk);
+            Thread.sleep(1000);
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Motorista Youse')]", "XPATH", 1)) {
+                System.out.println("motorista");
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Motorista Youse')]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", meuchk);
+            }
+
+            Thread.sleep(2000);
+
+
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Lavagem e higieniza')]", "XPATH", 1)) {
+                System.out.println("higienizacao");
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Lavagem e higieniza')]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", meuchk);
+            }
+
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'leva e traz')]", "XPATH", 1)) {
+                System.out.println("leva e traz");
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'leva e traz')]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", meuchk);
+            }
+
+            Thread.sleep(1000);
+
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, ' de IPVA')]", "XPATH", 1)) {
+                System.out.println("ipva");
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, ' de IPVA')]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", meuchk);
+            }
+
+            Thread.sleep(1000);
+
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'rico veicular')]", "XPATH", 1)) {
+                System.out.println("hisyorico");
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'rico veicular')]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", meuchk);
+            }
+
+            Thread.sleep(1000);
+
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'ncia a bike')]", "XPATH", 1)) {
+                System.out.println("bike");
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'ncia a bike')]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", meuchk);
+            }
+
+            Thread.sleep(5000);
+            imprimir.imprimir(driver, dados.getNrlinha());
+            imprimir.imprimirPDF(driver, dados.getNrlinha(), "P3_");
         }
-
-        Thread.sleep(2000);
-
-
-        if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Lavagem e higieniza')]", "XPATH", 1)) {
-            System.out.println("higienizacao");
-            WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Lavagem e higieniza')]"));
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].click();", meuchk);
-        }
-
-        if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'leva e traz')]", "XPATH", 1)) {
-            System.out.println("leva e traz");
-            WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'leva e traz')]"));
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].click();", meuchk);
-        }
-
-        Thread.sleep(1000);
-
-        if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, ' de IPVA')]", "XPATH", 1)) {
-            System.out.println("ipva");
-            WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, ' de IPVA')]"));
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].click();", meuchk);
-        }
-
-        Thread.sleep(1000);
-
-        if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'rico veicular')]", "XPATH", 1)) {
-            System.out.println("hisyorico");
-            WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'rico veicular')]"));
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].click();", meuchk);
-        }
-
-        Thread.sleep(1000);
-
-        if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'ncia a bike')]", "XPATH", 1)) {
-            System.out.println("bike");
-            WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'ncia a bike')]"));
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].click();", meuchk);
-        }
-
-        Thread.sleep(5000);
-        imprimir.imprimir(driver, dados.getNrlinha());
-        imprimir.imprimirPDF(driver, dados.getNrlinha(), "P3_");
-
     }
 }
 

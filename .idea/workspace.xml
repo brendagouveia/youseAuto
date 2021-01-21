@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c12f6477-8cce-4009-8f0d-e80356c355e5" name="Default Changelist" comment="">
+    <list default="true" id="c12f6477-8cce-4009-8f0d-e80356c355e5" name="Default Changelist" comment="alterção novo layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basico/AbrirYouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/AbrirYouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basico/Impressao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Impressao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/supporte/Navegador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/supporte/Navegador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestYouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestYouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/Navegador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/supporte/Navegador.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611159742914</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="alterção novo layout">
+      <created>1611175106559</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611175106622</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,46 +136,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603318622450" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1611175094875">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1611219035035">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1611175094875" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1611219035035" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1605783884970">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605783884970" />
-    <state width="1306" height="179" key="GridCell.Tab.0.bottom" timestamp="1611174623459">
+    <state width="1306" height="179" key="GridCell.Tab.0.bottom" timestamp="1611227581344">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611174623459" />
-    <state width="1306" height="179" key="GridCell.Tab.0.center" timestamp="1611174623459">
+    <state width="1306" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611227581344" />
+    <state width="1306" height="179" key="GridCell.Tab.0.center" timestamp="1611227581344">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611174623459" />
-    <state width="1306" height="179" key="GridCell.Tab.0.left" timestamp="1611174623459">
+    <state width="1306" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611227581344" />
+    <state width="1306" height="179" key="GridCell.Tab.0.left" timestamp="1611227581344">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611174623459" />
-    <state width="1306" height="179" key="GridCell.Tab.0.right" timestamp="1611174623459">
+    <state width="1306" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611227581344" />
+    <state width="1306" height="179" key="GridCell.Tab.0.right" timestamp="1611227581344">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611174623459" />
-    <state width="1306" height="144" key="GridCell.Tab.1.bottom" timestamp="1611163587080">
+    <state width="1306" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611227581344" />
+    <state width="1306" height="144" key="GridCell.Tab.1.bottom" timestamp="1611222614971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="144" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611163587080" />
-    <state width="1306" height="144" key="GridCell.Tab.1.center" timestamp="1611163587080">
+    <state width="1306" height="144" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611222614971" />
+    <state width="1306" height="144" key="GridCell.Tab.1.center" timestamp="1611222614971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="144" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1611163587080" />
-    <state width="1306" height="144" key="GridCell.Tab.1.left" timestamp="1611163587080">
+    <state width="1306" height="144" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1611222614971" />
+    <state width="1306" height="144" key="GridCell.Tab.1.left" timestamp="1611222614971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="144" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1611163587080" />
-    <state width="1306" height="144" key="GridCell.Tab.1.right" timestamp="1611163587080">
+    <state width="1306" height="144" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1611222614971" />
+    <state width="1306" height="144" key="GridCell.Tab.1.right" timestamp="1611222614971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="144" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1611163587080" />
+    <state width="1306" height="144" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1611222614971" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1605100347378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -175,13 +190,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/basico/Tela4.java</url>
-          <line>107</line>
+          <line>109</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/basico/Tela2.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

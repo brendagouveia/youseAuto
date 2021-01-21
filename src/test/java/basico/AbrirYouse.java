@@ -23,7 +23,7 @@ public class AbrirYouse {
             System.out.println("ACHOU O BOTAO DE COTACAO");
             driver.findElement(By.xpath("//*[contains(text(), 'Cotar agora')]")).click();
 
-            Thread.sleep(2000);
+
 
         }
         return driver;

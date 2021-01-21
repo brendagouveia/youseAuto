@@ -23,7 +23,7 @@ public class Navegador {
 
         driver.get("https://www.youse.com.br/seguro-auto/");
         System.out.println("espera a janela abrir");
-        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
 

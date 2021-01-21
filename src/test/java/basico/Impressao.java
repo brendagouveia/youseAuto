@@ -61,7 +61,12 @@ public class Impressao {
 
     public void imprimirPDF(WebDriver driver, String nrlinha, String parte) throws IOException, UnsupportedFlavorException, InterruptedException, AWTException, FindFailed {
         String numeroPdf = nrlinha.replaceAll(".TXT", "");
-        File  file = new File("d:\\youse\\pdf\\" + parte + numeroPdf);
+        File file;
+        if (tipoSO.contains("WINDOWS")) {
+             file = new File("d:\\youse\\pdf\\" + parte + numeroPdf + ".pdf");
+        }else{
+            file = new File("/home/robertinho/youse/pdf/" + parte + numeroPdf + ".pdf");
+        }
         if (!file.exists()) {
 
 

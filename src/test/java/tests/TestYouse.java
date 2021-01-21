@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 
+
 public class TestYouse {
     private WebDriver driver;
 
@@ -72,7 +73,9 @@ public class TestYouse {
                 System.out.println(e.getMessage());
 
             } finally {
-                driver.quit();
+                if(driver!=null){
+                    driver.quit();
+                }
                 System.gc();
                 continue;
 
