@@ -13,8 +13,8 @@ public class Navegador {
         ChromeDriver driver = null;
 
 
-        System.setProperty("webdriver.chrome.driver", "D:\\youse\\driver\\chromedriver.exe");
-       // System.setProperty("webdriver.chrome.driver", "/home/robertinho/drivers/chromedriver");
+       // System.setProperty("webdriver.chrome.driver", "D:\\youse\\driver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/robertinho/drivers/chromedriver");
 
 
 
