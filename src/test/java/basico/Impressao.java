@@ -20,8 +20,8 @@ import java.io.IOException;
 
 public class Impressao {
 
-    String tipoSO = "WINDOWS";
-    //String tipoSO="LINUX";
+   // String tipoSO = "WINDOWS";
+    String tipoSO="LINUX";
 
     public void imprimir(WebDriver driver, String nrlinha) throws IOException, UnsupportedFlavorException {
         String textoQueSeraEscrito;
