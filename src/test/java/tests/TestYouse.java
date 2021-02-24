@@ -21,7 +21,7 @@ public class TestYouse {
     @Test
     public void ativarYouse() throws IOException{
 	//criar pastas
- 	/*File pastaarquivos1 = new File("/home/robertinho/youse/arquivos");
+ 	File pastaarquivos1 = new File("/home/robertinho/youse/arquivos");
         pastaarquivos1.mkdir();
 	File pastaarquivos2 = new File("/home/robertinho/youse/pdf");
         pastaarquivos2.mkdir();
@@ -72,7 +72,7 @@ public class TestYouse {
             FileUtils.deleteDirectory(diretorio);
         }
 
-*/
+
         //instanciando classes que serão utilizadas
         NrArquivo nrlinha = new NrArquivo();
         LerArquivoYouse arquivo = new LerArquivoYouse();
