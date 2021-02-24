@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class NrArquivo {
 
-    String tipoSO="WINDOWS";
-    //String tipoSO="LINUX";
+    //String tipoSO="WINDOWS";
+    String tipoSO="LINUX";
 
     public ArrayList<String> carregarArquivos() {
         ArrayList<String> listaNrlinha = new ArrayList<String>();

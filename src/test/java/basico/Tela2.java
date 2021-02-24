@@ -36,9 +36,9 @@ public class Tela2 {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"container\"]/div[10]/div/a")));
         //if (VerificarElemento.verificar(driver, "//*[@id=\"container\"]/div[10]/div/a", "XPATH", 3)) {
-            System.out.println("Achou a JANELA PLACA ERRADA");
-            driver.findElement(By.xpath("//*[@id=\"container\"]/div[10]/div/a")).click();
-       // }
+        System.out.println("Achou a JANELA PLACA ERRADA");
+        driver.findElement(By.xpath("//*[@id=\"container\"]/div[10]/div/a")).click();
+        // }
           /*  driver.switchTo().frame("webWidget");
             if (driver.findElements(By.xpath("//*[contains(@aria-label, 'Minimizar widget')]")).size() > 0) {
                 driver.findElement(By.xpath("//*[contains(@aria-label, 'Minimizar widget')]")).click();
@@ -56,14 +56,16 @@ public class Tela2 {
         if (dados.getMarca().toUpperCase().contains("VW - VOLKSWAGEN")) {
             dados.setMarca("VOLKSWAGEN");
         }
+ 	
         if (dados.getMarca().toUpperCase().contains("MITSUBISH")) {
             dados.setMarca("MITSUBISHI");
         }
         if (dados.getMarca().toUpperCase().contains("GM")) {
             dados.setMarca("CHEVROLET");
         }
-        if (dados.getMarca().toUpperCase().contains("CITROEN")) {
-            dados.setMarca("CITROËN");
+        if (dados.getMarca().toUpperCase().contains("CITRO")) {
+            dados.setMarca("CITRO");
+	    System.out.println("entrei citro");
         }
         if (dados.getMarca().toUpperCase().contains("KIA")) {
             dados.setMarca("KIA MOTORS");
@@ -72,7 +74,9 @@ public class Tela2 {
             dados.setMarca("GRAND VITARA 2.0 16V 4X2 / 4X4 5P AUT");
         }
 
-
+      
+ 	System.out.println(dados.getNrlinha());
+	System.out.println(dados.getVeiculo());
         //verificar se a marca existe no combo
         int posicao = -1;
         java.util.List<WebElement> listaMarca = slctMarca.getOptions();
@@ -82,6 +86,8 @@ public class Tela2 {
             }
             i++;
         }
+	System.out.println(dados.getMarca().toUpperCase());
+	System.out.println(posicao);
         if (posicao > -1) {
             slctMarca.selectByIndex(posicao);
             Thread.sleep(5000);
@@ -98,7 +104,7 @@ public class Tela2 {
 
             if (posicao > -1) {
                 System.out.println(listaVersao.get(posicao).getText());
-                slcVersao.selectByVisibleText(dados.getVersaoMod().toUpperCase());
+                slcVersao.selectByIndex(posicao);
                 Thread.sleep(2000);
                 WebElement cmbAno = driver.findElement(By.id("manual_auto_order_flow_pricing_requirements_vehicle_attributes_year"));
                 Select slcAno = new Select(cmbAno);
@@ -139,7 +145,7 @@ public class Tela2 {
                     Thread.sleep(1000);
                     System.out.println("testar veiculo sem aceitacao");
 
-                    if (driver.findElements(By.xpath("//*[contains(text(), 'a gente ainda não oferece seguros para o mesmo modelo e ano do seu carro.')]")).size() > 0) {
+                    if (driver.findElements(By.xpath("//*[contains(text(), 'a gente ainda')]")).size() > 0) {
                         System.out.println("veiculo sem aceitacao");
                         testeCarro = "RESTRICAO VEICULO";
 
@@ -184,9 +190,44 @@ public class Tela2 {
                         if (dados.getCep1().contains("11250971")) {
                             dados.setCep1("11250261");
                         }
-                       /* if (dados.getCep1().contains("14140000")) {
-                            dados.setCep1("14140970");
-                        }*/
+                        if (dados.getCep1().contains("13160000")) {
+                            dados.setCep1("13160076");
+                        }
+                        if (dados.getCep1().contains("13165000")) {
+                            dados.setCep1("13165010");
+                        }
+                        if (dados.getCep1().contains("18550000")) {
+                            dados.setCep1("18550970");
+                        }
+                        if (dados.getCep1().contains("13190000")) {
+                            dados.setCep1("13197650");
+                        }
+                        if (dados.getCep1().contains("16300971")) {
+                            dados.setCep1("16300970");
+                        }
+                        if (dados.getCep1().contains("13915000")) {
+                            dados.setCep1("13915001");
+                        }
+                        if (dados.getCep1().contains("15400000")) {
+                            dados.setCep1("15406040");
+                        }
+                        if (dados.getCep1().contains("15900971")) {
+                            dados.setCep1("15900970");
+                        }
+                        if (dados.getCep1().contains("13390000")) {
+                            dados.setCep1("13390970");
+                        }
+                        if (dados.getCep1().contains("17123000")) {
+                            dados.setCep1("17123132");
+                        }
+                        if (dados.getCep1().contains("13280971")) {
+                            dados.setCep1("13280001");
+                        }
+                        if (dados.getCep1().contains("18905000")) {
+                            dados.setCep1("18900970");
+                        }
+                        System.out.println(dados.getCep1());
+                        System.out.println(dados.getNrlinha());
                         if (VerificarElemento.verificar(driver, "auto_order_flow_pricing_requirements_vehicle_attributes_address_attributes_zipcode", "ID", 30)) {
                             for (int i = 0; i < dados.getCep1().length(); ) {
                                 char c = dados.getCep1().charAt(i);
@@ -197,9 +238,9 @@ public class Tela2 {
                             Thread.sleep(1000);
 
 
-                          if(driver.findElement(By.id("auto_order_flow_pricing_requirements_vehicle_attributes_address_attributes_neighborhood")).isDisplayed()){
-                               System.out.println("Achou bairro");
-                                String bairro="centro";
+                            if (driver.findElement(By.id("auto_order_flow_pricing_requirements_vehicle_attributes_address_attributes_neighborhood")).isDisplayed()) {
+                                System.out.println("Achou bairro");
+                                String bairro = "centro";
                                 for (int i = 0; i < bairro.length(); ) {
                                     char c = bairro.charAt(i);
                                     String s = new StringBuilder().append(c).toString();
@@ -320,7 +361,7 @@ public class Tela2 {
                             driver.switchTo().defaultContent();*/
 
 
-                        imprimir.imprimirPDF(driver, dados.getNrlinha(), "P1_");
+                        //imprimir.imprimirPDF(driver, dados.getNrlinha(), "P1_");
                         imprimir.imprimir(driver, dados.getNrlinha());
                         Thread.sleep(1000);
                         driver.findElement(By.name("commit")).click();

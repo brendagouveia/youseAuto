@@ -21,7 +21,7 @@ import java.io.IOException;
 public class Impressao {
 
    // String tipoSO = "WINDOWS";
-    String tipoSO="LINUX";
+     String tipoSO="LINUX";
 
     public void imprimir(WebDriver driver, String nrlinha) throws IOException, UnsupportedFlavorException {
         String textoQueSeraEscrito;
@@ -79,7 +79,7 @@ public class Impressao {
                 r.keyPress(KeyEvent.VK_P);
                 r.keyRelease(KeyEvent.VK_CONTROL);
                 r.keyRelease(KeyEvent.VK_P);
-                Thread.sleep(8000);
+                Thread.sleep(18000);
 
                 System.out.println("passou o tempo");
 
@@ -104,7 +104,7 @@ public class Impressao {
                     System.out.println("vai clicar");
 
                     s.click(btnimp);
-                    Thread.sleep(8000);
+                    Thread.sleep(18000);
                      numeroPdf = nrlinha.replaceAll(".TXT", "");
                     if (tipoSO.contains("WINDOWS")) {
                         s.type("d:\\youse\\pdf\\" + parte + numeroPdf);

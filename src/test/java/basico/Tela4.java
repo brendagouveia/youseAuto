@@ -21,25 +21,39 @@ public class Tela4 {
 
     public void preencherTela4(WebDriver driver, Variaveis dados) throws InterruptedException, IOException, UnsupportedFlavorException, FindFailed, AWTException {
 
-        // WebDriverWait wait = new WebDriverWait(driver, 15);
-        // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), 'Adicione assistências ao seu seguro')]")));
+
         if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_2')]", "XPATH", 10)) {
 
             System.out.println("Achou a tela 4");
             //ass 400 km
             Thread.sleep(1000);
+
+
+
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Assistência a automóvel')]", "XPATH", 1)) {
+                System.out.println("motorista");
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Assistência a automóvel')]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", meuchk);
+            }
+
+
             //ass basica
            /* if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_3')]", "XPATH", 1)) {
                 WebElement rdbAss = driver.findElement(By.xpath("//*[contains(@value, 'YOUSE_ID_3')]"));
                 JavascriptExecutor jsAss = (JavascriptExecutor) driver;
-                jsAss.executeScript("arguments[0].click();", rdbAss);*/
+                jsAss.executeScript("arguments[0].click();", rdbAss);
 
             if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_2')]", "XPATH", 1)) {
                 WebElement rdbAss = driver.findElement(By.xpath("//*[contains(@value, 'YOUSE_ID_2')]"));
                 JavascriptExecutor jsAss = (JavascriptExecutor) driver;
                 jsAss.executeScript("arguments[0].click();", rdbAss);
+            }*/
+            if (VerificarElemento.verificar(driver, "//*[contains(@value, 'YOUSE_ID_1')]", "XPATH", 1)) {
+                WebElement rdbAss = driver.findElement(By.xpath("//*[contains(@value, 'YOUSE_ID_1')]"));
+                JavascriptExecutor jsAss = (JavascriptExecutor) driver;
+                jsAss.executeScript("arguments[0].click();", rdbAss);
             }
-
 
             Thread.sleep(1000);
         /*if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Reparos simples')]", "XPATH", 1)) {
@@ -80,21 +94,21 @@ public class Tela4 {
 
             Thread.sleep(1000);
 
-            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, ' de IPVA')]", "XPATH", 1)) {
+          /*  if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Restituição de IPVA')]", "XPATH", 1)) {
                 System.out.println("ipva");
-                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, ' de IPVA')]"));
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Restituição de IPVA')]"));
                 JavascriptExecutor js = (JavascriptExecutor) driver;
                 js.executeScript("arguments[0].click();", meuchk);
             }
 
             Thread.sleep(1000);
 
-            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'rico veicular')]", "XPATH", 1)) {
+            if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Serviço de histórico veicular')]", "XPATH", 1)) {
                 System.out.println("hisyorico");
-                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'rico veicular')]"));
+                WebElement meuchk = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Serviço de histórico veicular')]"));
                 JavascriptExecutor js = (JavascriptExecutor) driver;
                 js.executeScript("arguments[0].click();", meuchk);
-            }
+            }*/
 
             Thread.sleep(1000);
 
@@ -105,9 +119,9 @@ public class Tela4 {
                 js.executeScript("arguments[0].click();", meuchk);
             }
 
-            Thread.sleep(5000);
+            Thread.sleep(6000);
             imprimir.imprimir(driver, dados.getNrlinha());
-            imprimir.imprimirPDF(driver, dados.getNrlinha(), "P3_");
+           // imprimir.imprimirPDF(driver, dados.getNrlinha(), "P3_");
         }
     }
 }

@@ -11,12 +11,21 @@ public class LerArquivoYouse {
     public Variaveis lerArquivoNr(String nrlinha) throws IOException {
         this.nrlinha = nrlinha;
         arquivoP = new Variaveis();
-
-        File file = new File("D:\\youse\\arquivos\\" + nrlinha);
-        //File file = new File("/home/robertinho/youse/arquivos/" + nrlinha);
+        // String tipoSO="WINDOWS";
+        String tipoSO="LINUX";
+        File file;
+        if (tipoSO.contains("WINDOWS")) {
+             file = new File("D:\\youse\\arquivos\\" + nrlinha);
+        }else {
+             file = new File("/home/robertinho/youse/arquivos/" + nrlinha);
+        }
         if (file.exists()) {
-           // Scanner ler = new Scanner("/home/robertinho/youse/arquivos/" + nrlinha);
-            Scanner ler = new Scanner("D:\\youse\\arquivos\\" + nrlinha);
+            Scanner ler ;
+            if (tipoSO.contains("WINDOWS")) {
+                 ler = new Scanner("D:\\youse\\arquivos\\" + nrlinha);
+            }else{
+                 ler = new Scanner("/home/robertinho/youse/arquivos/" + nrlinha);
+            }
             String arquivo = ler.nextLine();
             FileReader arq = new FileReader(arquivo);
             BufferedReader lerArq = new BufferedReader(arq);

@@ -3,19 +3,76 @@ package tests;
 import basico.*;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-
+import java.io.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Scanner;
 import javax.swing.*;
 import java.util.ArrayList;
-
+import java.io.File;
+import java.io.PrintWriter;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 public class TestYouse {
     private WebDriver driver;
 
     @Test
-    public void ativarYouse() {
+    public void ativarYouse() throws IOException{
+	//criar pastas
+ 	/*File pastaarquivos1 = new File("/home/robertinho/youse/arquivos");
+        pastaarquivos1.mkdir();
+	File pastaarquivos2 = new File("/home/robertinho/youse/pdf");
+        pastaarquivos2.mkdir();
+	File pastaarquivos3 = new File("/home/robertinho/youse/prontos");
+        pastaarquivos3.mkdir();
+	File pastaarquivos4 = new File("/home/robertinho/youse/carro");
+        pastaarquivos4.mkdir();
+	File pastaarquivos5 = new File("/home/robertinho/youse/restricao veiculo");
+        pastaarquivos5.mkdir();
 
 
+        //distribuir
+	//cria arquivo com o nome da vm caso nao exista
+             
+
+	FileWriter arq1 = new FileWriter("/home/robertinho/ferramentas/mover/NomeVm.txt");
+        String hostname = "Unknown";
+
+        try
+        {
+            InetAddress addr;
+            addr = InetAddress.getLocalHost();
+            hostname = addr.getHostName();
+        }
+        catch (UnknownHostException ex)
+        {
+            System.out.println("Hostname can not be resolved");
+        }
+        PrintWriter gravararq = new PrintWriter(arq1);
+        gravararq.println(hostname);
+        gravararq.flush();
+        gravararq.close();
+
+        Scanner ler = new Scanner("/home/robertinho/ferramentas/mover/NomeVm.txt");
+        String nome1 = ler.nextLine();
+        FileReader arq = new FileReader(nome1);
+        BufferedReader LerArquivo = new BufferedReader(arq);
+        String nomevm = LerArquivo.readLine();
+        arq.close();
+ 	
+
+        // caminho de onde ira pegar os arquivos
+        File diretorio = new File("/run/user/1000/gvfs/smb-share:server=freenas.local,share=arquivosgerais/E/LABSEG/apolice/result/youse/prontos/distribuir/" + nomevm + "/");
+        File destino = new File("/home/robertinho/youse/arquivos/");
+	//distribui os arquivos para a vm
+        if (diretorio.exists()) {
+            FileUtils.copyDirectory(diretorio, destino);
+            FileUtils.deleteDirectory(diretorio);
+        }
+
+*/
         //instanciando classes que serão utilizadas
         NrArquivo nrlinha = new NrArquivo();
         LerArquivoYouse arquivo = new LerArquivoYouse();
@@ -25,6 +82,7 @@ public class TestYouse {
         Tela3 tela3=new Tela3();
         Tela4 tela4=new Tela4();
         //fim instanciando
+
 
 
         //carregar numlinha dos arquivos na pasta

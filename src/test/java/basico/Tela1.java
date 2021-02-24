@@ -28,8 +28,7 @@ import java.util.Map;
 
 public class Tela1 {
 
-   //String tipoSO = "WINDOWS";
-    String tipoSO="LINUX";
+
 
 
     public void preencherTela1(WebDriver driver, Variaveis dados) throws InterruptedException {
