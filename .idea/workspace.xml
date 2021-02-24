@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c12f6477-8cce-4009-8f0d-e80356c355e5" name="Default Changelist" comment="alterção novo layout">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="c12f6477-8cce-4009-8f0d-e80356c355e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basico/Impressao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Impressao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basico/LerArquivoYouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/LerArquivoYouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basico/NrArquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/NrArquivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/supporte/Navegador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/supporte/Navegador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestYouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestYouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/LerArquivoYouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/basico/LerArquivoYouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/NrArquivo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/basico/NrArquivo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/Navegador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/supporte/Navegador.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +22,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="main" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="labsegconsultoria" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="youseAuto" />
   </component>
   <component name="ProjectId" id="1ixkGqibaqppHBho4hXB0v7UhvY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -142,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611227913391</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="alterção novo layout">
+      <created>1614126256761</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614126256761</updated>
+    </task>
+    <task id="LOCAL-00009" summary="alterção novo layout">
+      <created>1614126314589</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614126314589</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

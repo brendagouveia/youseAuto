@@ -51,7 +51,7 @@ public class Tela3 {
             System.out.println("Achou a tela 3");
             Thread.sleep(1000);
 
-            String pacote = "COMPLETA";
+            String pacote = "ESSENCIAL";
 
             if (pacote.contains("ESSENCIAL")) {
                 //Só ROUBO E FURTO
