@@ -52,7 +52,7 @@ public class Tela3 {
             System.out.println("Achou a tela 3");
             Thread.sleep(1000);
 
-            String pacote = "INTERMEDIARIA";
+            String pacote = "COMPLETA";
 
             if (pacote.contains("ESSENCIAL")) {
                 //Só ROUBO E FURTO
@@ -70,7 +70,7 @@ public class Tela3 {
                 jsdm.executeScript("arguments[0].click();", meuchkdm);
 
 
-            } else if (pacote.contains("COMPLETA")) {
+            } else if (pacote.contains("INTERMEDIARIA")) {
                 //nao contratar qualquer batida
                 WebElement meuchkcoli = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Vale pra qualquer batida')]"));
 
