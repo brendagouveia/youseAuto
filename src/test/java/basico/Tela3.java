@@ -43,7 +43,8 @@ public class Tela3 {
 
         Thread.sleep(1000);
 
-
+        imprimir.imprimir(driver, dados.getNrlinha());
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[contains(text(), 'Personalizar')]")).click();
         Thread.sleep(1000);
 
@@ -69,7 +70,7 @@ public class Tela3 {
                 jsdm.executeScript("arguments[0].click();", meuchkdm);
 
 
-            } else if (pacote.contains("INTERMEDIARIA")) {
+            } else if (pacote.contains("COMPLETA")) {
                 //nao contratar qualquer batida
                 WebElement meuchkcoli = driver.findElement(By.xpath("//*[contains(@data-track-name, 'Vale pra qualquer batida')]"));
 
