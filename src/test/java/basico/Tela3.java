@@ -130,7 +130,7 @@ public class Tela3 {
 
                         }
                     }
-
+*/
 
                     if (VerificarElemento.verificar(driver, "//*[contains(@data-track-name, 'Danos corporais a terceiros')]", "XPATH", 30)) {
                         System.out.println("DC");
@@ -157,7 +157,7 @@ public class Tela3 {
 
 
                     }
-
+/*
                     if (Integer.parseInt(dados.getApp()) > 0) {
 
                         if (Integer.parseInt(dados.getApp()) > 20000) {

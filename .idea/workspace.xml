@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c12f6477-8cce-4009-8f0d-e80356c355e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basico/Tela3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basico/Tela3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/LerArquivoYouse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/NrArquivo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/Resumo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/Variaveis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/Navegador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/VerificarElemento.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +185,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/basico/Tela4.java</url>
           <line>24</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/basico/Tela4.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
