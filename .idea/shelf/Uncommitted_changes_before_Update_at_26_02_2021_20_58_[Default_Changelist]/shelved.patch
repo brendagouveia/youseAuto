@@ -1,0 +1,188 @@
+Index: src/test/java/supporte/Navegador.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package supporte;\n\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.chrome.ChromeDriver;\n\nimport java.io.IOException;\nimport java.util.concurrent.TimeUnit;\n\npublic class Navegador {\n\n    public static WebDriver retornarNavegador() throws IOException, InterruptedException {\n\n        ChromeDriver driver = null;\n\n\n        System.setProperty(\"webdriver.chrome.driver\", \"D:\\\\youse\\\\driver\\\\chromedriver.exe\");\n       // System.setProperty(\"webdriver.chrome.driver\", \"/home/robertinho/drivers/chromedriver\");\n\n\n\n        System.out.println(\"iniciar o abrir\");\n        driver = new ChromeDriver();\n\n        driver.get(\"https://www.youse.com.br/seguro-auto/\");\n        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);\n        driver.manage().window().maximize();\n\n\n        return driver;\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/supporte/Navegador.java b/src/test/java/supporte/Navegador.java
+--- a/src/test/java/supporte/Navegador.java	
++++ b/src/test/java/supporte/Navegador.java	
+@@ -13,8 +13,8 @@
+         ChromeDriver driver = null;
+ 
+ 
+-        System.setProperty("webdriver.chrome.driver", "D:\\youse\\driver\\chromedriver.exe");
+-       // System.setProperty("webdriver.chrome.driver", "/home/robertinho/drivers/chromedriver");
++       // System.setProperty("webdriver.chrome.driver", "D:\\youse\\driver\\chromedriver.exe");
++        System.setProperty("webdriver.chrome.driver", "/home/robertinho/drivers/chromedriver");
+ 
+ 
+ 
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/jarRepositories.xml	
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"CompilerConfiguration\">\n    <annotationProcessing>\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\n        <outputRelativeToContentRoot value=\"true\" />\n        <module name=\"YouseProjeto\" />\n      </profile>\n    </annotationProcessing>\n    <bytecodeTargetLevel target=\"8\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	
++++ b/.idea/compiler.xml	
+@@ -7,6 +7,7 @@
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+         <module name="YouseProjeto" />
++        <module name="youseAuto" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel target="8" />
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"c12f6477-8cce-4009-8f0d-e80356c355e5\" name=\"Default Changelist\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"importingSettings\">\n      <MavenImportingSettings>\n        <option name=\"importAutomatically\" value=\"true\" />\n      </MavenImportingSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"1ixkGqibaqppHBho4hXB0v7UhvY\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showExcludedFiles\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.projectsettings.compiler.javacompiler\" />\n  </component>\n  <component name=\"RunManager\" selected=\"JUnit.TestYouse.ativarYouse\">\n    <configuration name=\"TestYouse.IniciarYouse\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"YouseProjeto\" />\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.TestYouse\" />\n      <option name=\"METHOD_NAME\" value=\"IniciarYouse\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"TestYouse.ativarYouse\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"YouseProjeto\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"tests.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.TestYouse\" />\n      <option name=\"METHOD_NAME\" value=\"ativarYouse\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.TestYouse.ativarYouse\" />\n        <item itemvalue=\"JUnit.TestYouse.IniciarYouse\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"c12f6477-8cce-4009-8f0d-e80356c355e5\" name=\"Default Changelist\" comment=\"\" />\n      <created>1602856537065</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1602856537065</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"413\" y=\"112\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1603318622450\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state x=\"413\" y=\"112\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318622450\" />\n    <state x=\"463\" y=\"120\" key=\"FileChooserDialogImpl\" timestamp=\"1603320531064\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state x=\"463\" y=\"120\" key=\"FileChooserDialogImpl/0.0.1366.728@0.0.1366.728\" timestamp=\"1603320531064\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.center\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.left\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.right\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.bottom\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.center\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.left\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.right\" timestamp=\"1603318510080\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state width=\"1323\" height=\"223\" key=\"GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728\" timestamp=\"1603318510080\" />\n    <state x=\"184\" y=\"7\" key=\"SettingsEditor\" timestamp=\"1602857013145\">\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\n    </state>\n    <state x=\"184\" y=\"7\" key=\"SettingsEditor/0.0.1366.728@0.0.1366.728\" timestamp=\"1602857013145\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,7 +1,31 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="ALL" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c12f6477-8cce-4009-8f0d-e80356c355e5" name="Default Changelist" comment="" />
++    <list default="true" id="c12f6477-8cce-4009-8f0d-e80356c355e5" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/supporte/Navegador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/supporte/Navegador.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/YouseProjeto.kotlin_module" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/TestYouse.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/AbrirYouse.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/ExceptionPorto.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/LerArquivoYouse.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/NrArquivo.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/Resumo.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/TelasYouse.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/basico/Variaveis.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/ArquivoSessao_ID.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/ArquivoURL.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/LerArquivo.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/Navegador.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/supporte/VerificarElemento.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestYouse.class" beforeDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -13,22 +37,27 @@
+         <option value="Class" />
+       </list>
+     </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MavenImportPreferences">
+-    <option name="importingSettings">
+-      <MavenImportingSettings>
+-        <option name="importAutomatically" value="true" />
+-      </MavenImportingSettings>
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
++      </MavenGeneralSettings>
+     </option>
+   </component>
+   <component name="ProjectId" id="1ixkGqibaqppHBho4hXB0v7UhvY" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showExcludedFiles" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+   </component>
+   <component name="RunManager" selected="JUnit.TestYouse.ativarYouse">
+@@ -43,7 +72,7 @@
+       </method>
+     </configuration>
+     <configuration name="TestYouse.ativarYouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="YouseProjeto" />
++      <useClassPathOnly />
+       <extension name="coverage">
+         <pattern>
+           <option name="PATTERN" value="tests.*" />
+@@ -54,6 +83,7 @@
+       <option name="MAIN_CLASS_NAME" value="tests.TestYouse" />
+       <option name="METHOD_NAME" value="ativarYouse" />
+       <option name="TEST_OBJECT" value="method" />
++      <option name="PARAMETERS" value="" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -65,6 +95,7 @@
+       </list>
+     </recent_temporary>
+   </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/vcs.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
